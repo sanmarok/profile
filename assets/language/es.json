@@ -1,0 +1,12 @@
+{
+  "home": {
+    "hi": "Hola, soy",
+    "bio": "Apasionado por la tecnología y la infraestructura. Transformo problemas complejos en arquitecturas simples, seguras y escalables desde mi terminal Linux."
+  },
+  "nodes": {
+    "experience": "Experiencia",
+    "education": "Formación",
+    "projects": "Proyectos",
+    "skills": "Habilidades"
+  }
+}

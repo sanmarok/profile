@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos del Sistema
+.DS_Store
+Thumbs.db
+
+# Logs y Temporales
+*.log
+.tmp/
+.temp/
+
+# IDEs y Editores
+.vscode/
+.idea/
+
+# Entorno y Secretos (¡MUY IMPORTANTE!)
+.env
+*.key
+*.pem

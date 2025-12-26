@@ -1,0 +1,12 @@
+{
+  "home": {
+    "hi": "Hi, I'm",
+    "bio": "Passionate about technology and infrastructure. I transform complex problems into simple, secure, and scalable architectures from my Linux terminal."
+  },
+  "nodes": {
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills"
+  }
+}

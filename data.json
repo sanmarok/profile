@@ -1,0 +1,18 @@
+{
+    "experiencia": {
+        "titulo": "Mi Experiencia",
+        "contenido": "<p class='mb-4'>He trabajado como SysAdmin y Dev...</p><ul class='list-disc pl-5'><li>Proyecto A</li><li>Proyecto B</li></ul>"
+    },
+    "habilidades": {
+        "titulo": "Habilidades Técnicas",
+        "contenido": "<div class='grid grid-cols-2 gap-2'><span>Linux</span><span>Docker</span><span>Tailwind</span></div>"
+    },
+    "proyectos": {
+        "titulo": "Mis Proyectos",
+        "contenido": "<p>Aquí puedes ver mis repositorios de GitHub...</p>"
+    },
+    "formacion": {
+        "titulo": "Educación",
+        "contenido": "<p>Certificaciones en Linux y Desarrollo Web.</p>"
+    }
+}
