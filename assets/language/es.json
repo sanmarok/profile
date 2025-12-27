@@ -1,12 +1,19 @@
 {
   "home": {
     "hi": "Hola, soy",
-    "bio": "Apasionado por la tecnología y la infraestructura. Transformo problemas complejos en arquitecturas simples, seguras y escalables desde mi terminal Linux."
+    "bio": "Dev & Infra. Transformo problemas complejos en desafíos de aprendizaje. Mi filosofía: si se puede romper, se puede aprender; si se aprende, tiene solución."
   },
   "nodes": {
+    "about": "Sobre Mí",
     "experience": "Experiencia",
     "education": "Formación",
     "projects": "Proyectos",
-    "skills": "Habilidades"
+    "skills": "Habilidades",
+    "blog": "Blog/Notas",
+    "contact": "Contacto"
+  },
+  "player": {
+    "now_playing": "Sonando",
+    "toast_msg": "Ey, algo más personal: te comparto mi radio en vivo 🎵"
   }
 }

@@ -1,12 +1,19 @@
 {
   "home": {
     "hi": "Hi, I'm",
-    "bio": "Passionate about technology and infrastructure. I transform complex problems into simple, secure, and scalable architectures from my Linux terminal."
+    "bio": "Dev & Infra. I transform complex problems into learning challenges. My motto: if it can be broken, it can be learned; if it's learned, it can be solved."
   },
   "nodes": {
+    "about": "About Me",
     "experience": "Experience",
     "education": "Education",
     "projects": "Projects",
-    "skills": "Skills"
+    "skills": "Skills",
+    "blog": "Blog/Notes",
+    "contact": "Contact"
+  },
+  "player": {
+    "now_playing": "Now Playing",
+    "toast_msg": "Hey, something more personal: sharing my live radio with you 🎵"
   }
 }

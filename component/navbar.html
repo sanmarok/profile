@@ -1,27 +1,37 @@
 <nav
-    class="glass border-b border-slate-200/50 dark:border-slate-700/50 w-full px-6 py-4 flex justify-between items-center transition-colors duration-300">
-    <span class="font-bold text-xl tracking-tight dark:text-white">SM<span class="text-blue-600">.</span></span>
+    class="sticky top-0 z-[100] glass border-b border-slate-200/60 dark:border-slate-700/50 w-full shadow-lg shadow-slate-900/5 transition-all duration-300">
+    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-transparent">
+        <div id="scroll-bar" class="h-full bg-blue-600 transition-all duration-150 w-0"></div>
+    </div>
 
-    <div class="flex items-center gap-6">
-        <button onclick="app.toggleLanguage()"
-            class="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors">
-            <span id="lang-label" class="uppercase">ES</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-            </svg>
-        </button>
+    <div class="w-full px-6 md:px-12 py-4 flex justify-between items-center">
 
-        <button onclick="app.toggleTheme()"
-            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 transition-all">
-            <svg id="theme-icon-sun" class="h-5 w-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
-            </svg>
-            <svg id="theme-icon-moon" class="h-5 w-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-            </svg>
-        </button>
+        <span onclick="app.loadPage('home')"
+            class="cursor-pointer font-black text-2xl tracking-tighter dark:text-white hover:opacity-80 transition-opacity">
+            SM<span class="text-blue-600">.</span>
+        </span>
+
+        <div class="flex items-center gap-10">
+            <button onclick="app.toggleLanguage()"
+                class="flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors uppercase">
+                <span id="lang-label">ES</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+            </button>
+
+            <button onclick="app.toggleTheme()"
+                class="relative p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all group">
+                <svg id="theme-icon-sun" class="h-5 w-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                </svg>
+                <svg id="theme-icon-moon" class="h-5 w-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
+            </button>
+        </div>
     </div>
 </nav>
