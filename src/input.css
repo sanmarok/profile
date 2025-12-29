@@ -1,5 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Tus estilos personalizados abajo */
+/* Configuración para modo oscuro por clase */
+@theme {
+    --font-sans: "Geist Var", sans-serif;
+}
+
+/* En v4, para usar un toggle manual por clase, asegúrate de que el selector sea reconocido */
+@variant dark (&:where(.dark, .dark *));
+
+/* No olvides tus fuentes de escaneo que configuramos antes */
+@source "../index.html";
+@source "../pages/**/*.html";
+@source "../component/**/*.html";
+@source "../app.js";

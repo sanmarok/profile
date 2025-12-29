@@ -1,7 +1,10 @@
 {
+  "ui": {
+    "search_experience": "Buscar por cargo, empresa o tecnología..."
+  },
   "home": {
     "hi": "Hola, soy",
-    "bio": "Dev & Infra. Transformo problemas complejos en desafíos de aprendizaje. Mi filosofía: si se puede romper, se puede aprender; si se aprende, tiene solución."
+    "bio": "Desarrollador enfocado en sistemas y servicios informáticos. Apasionado por crear arquitecturas eficientes y garantizar su mantenimiento y evolución técnica."
   },
   "nodes": {
     "about": "Sobre Mí",
@@ -9,11 +12,33 @@
     "education": "Formación",
     "projects": "Proyectos",
     "skills": "Habilidades",
-    "blog": "Blog/Notas",
-    "contact": "Contacto"
+    "technologies": "Tecnologías",
+    "interests": "Intereses"
   },
   "player": {
     "now_playing": "Sonando",
     "toast_msg": "Ey, algo más personal: te comparto mi radio en vivo 🎵"
-  }
+  },
+  "experience": [
+    {
+      "id": 1,
+      "init_time": "2022",
+      "end_time": "Presente",
+      "position": "SysAdmin & DevOps",
+      "empresa": "TecnoSoluciones S.A.",
+      "comentarios_personales": "Lideré la migración de servicios locales a contenedores Docker, optimizando el despliegue en un 40%.",
+      "tags": ["Linux", "Docker", "Nginx"],
+      "type": "infra"
+    },
+    {
+      "id": 2,
+      "init_time": "2020",
+      "end_time": "2022",
+      "position": "Desarrollador Backend",
+      "empresa": "Software Factory",
+      "comentarios_personales": "Mantenimiento de APIs críticas y automatización de backups mediante scripts en Python.",
+      "tags": ["Python", "SQL", "API"],
+      "type": "dev"
+    }
+  ]
 }

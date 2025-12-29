@@ -65,29 +65,51 @@ const app = {
     },
 
     toggleLanguage: async () => {
+        // 1. Cambiar el idioma y cargar las nuevas traducciones
         app.currentLang = app.currentLang === 'es' ? 'en' : 'es';
         localStorage.setItem('lang', app.currentLang);
         await app.loadTranslations();
+
+        // 2. Traducir el DOM estático (Navbar, Footer, etc.)
         app.translateDOM(document.body);
+
+        // 3. ACTUALIZACIÓN DINÁMICA:
+        // Detectamos en qué página estamos para re-renderizar si es necesario
+        const path = window.location.pathname.split('/')[1] || 'home';
         
+        if (path === 'experiencia' || path === 'experience') {
+            app.renderExperience();
+        }
+
+        // Actualizar la etiqueta del botón de idioma
         const label = document.getElementById('lang-label');
         if (label) label.innerText = app.currentLang.toUpperCase();
     },
 
-    // --- NAVEGACIÓN Y COMPONENTES ---
+        // --- NAVEGACIÓN Y COMPONENTES ---
     loadPage: async (slug, addToHistory = true) => {
         const contentArea = document.getElementById('main-content');
         try {
             const res = await fetch(`/pages/${slug}.html`);
             if (!res.ok) throw new Error("404");
             
+            // 1. Inyectamos el HTML base de la página
             contentArea.innerHTML = await res.text();
+            
+            // 2. Traducimos las etiquetas estáticas (títulos, placeholders, etc.)
             app.translateDOM(contentArea);
             
+            // 3. LÓGICA ESPECÍFICA: Si la página es experiencia, disparamos el renderizado dinámico
+            if (slug === 'experiencia' || slug === 'experience') {
+                app.renderExperience();
+            }
+
+            // 4. Manejo del historial y URL
             if (addToHistory) {
                 const url = slug === 'home' ? '/' : `/${slug}`;
                 window.history.pushState({ slug }, slug, url);
             }
+            
             window.scrollTo(0, 0);
         } catch (err) {
             contentArea.innerHTML = `
@@ -196,6 +218,73 @@ const app = {
             disk.classList.add('rotating');
         }
         app.isMusicPlaying = !app.isMusicPlaying;
+    },
+
+   renderExperience: () => {
+    const container = document.getElementById('experience-list');
+    const searchInput = document.getElementById('experience-search');
+    
+    // Aseguramos que use app.translations (la variable donde guardas el JSON)
+    const data = app.translations.experience;
+
+    if (!container || !data) return;
+
+    const drawList = (filteredData) => {
+        container.innerHTML = filteredData.map(exp => `
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-300">
+                <button onclick="this.parentElement.classList.toggle('is-open')" 
+                        class="w-full flex items-center justify-between p-5 text-left group">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600">
+                            ${app.getExpIcon(exp.type)}
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white">${exp.position}</h3>
+                            <p class="text-sm text-slate-500">${exp.init_time} — ${exp.end_time}</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform group-[.is-open]:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out [[.is-open]_&]:max-h-[500px]">
+                    <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-700/50">
+                        <p class="text-blue-500 font-medium mb-2 mt-4">${exp.empresa}</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                            ${exp.comentarios_personales}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            ${exp.tags.map(tag => `<span class="px-2 py-1 text-xs border border-blue-500/30 text-blue-500 rounded-md">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    };
+
+        // Buscador
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = data.filter(exp => 
+                    exp.position.toLowerCase().includes(query) || 
+                    exp.empresa.toLowerCase().includes(query) ||
+                    exp.tags.some(t => t.toLowerCase().includes(query))
+                );
+                drawList(filtered);
+            });
+        }
+
+        drawList(data);
+    },
+
+    getExpIcon: (type) => {
+        const icons = {
+            infra: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"></path></svg>`,
+            dev: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>`
+        };
+        return icons[type] || icons.dev;
     }
 };
 
@@ -215,6 +304,9 @@ window.onscroll = () => {
     const bar = document.getElementById("scroll-bar");
     if (bar) bar.style.width = scrolled + "%";
 };
+
+
+
 
 // Arrancar app
 document.addEventListener('DOMContentLoaded', app.init);
