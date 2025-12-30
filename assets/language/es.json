@@ -21,24 +21,94 @@
   },
   "experience": [
     {
-      "id": 1,
-      "init_time": "2022",
-      "end_time": "Presente",
-      "position": "SysAdmin & DevOps",
-      "empresa": "TecnoSoluciones S.A.",
-      "comentarios_personales": "Lideré la migración de servicios locales a contenedores Docker, optimizando el despliegue en un 40%.",
-      "tags": ["Linux", "Docker", "Nginx"],
+      "id": 9,
+      "init_time": "2025",
+      "end_time": "Actualidad",
+      "position": "SysAdmin e Infraestructura de Redes",
+      "empresa": "Internet Plus",
+      "comentarios_personales": "Dado el desempeño y compromiso que demostré en soporte técnico, se me confió la oportunidad de integrarme al equipo de infraestructura de servicios del ISP. Actualmente me encargo de mantener, controlar y monitorear el núcleo de la red, buscando siempre proponer mejoras y soluciones a problemas complejos de infraestructura. He profundizado mis conocimientos en sistemas críticos como IPTV e ISDBT, enfrentando un desafío constante donde pongo en práctica mis capacidades técnicas para garantizar la estabilidad de un servicio masivo.",
+      "tags": ["DevSys", "SysAdmin", "Networking", "IPTV", "ISDBT", "Sistemas Propietarios"],
       "type": "infra"
+    },
+    {
+      "id": 8,
+      "init_time": "2025",
+      "end_time": "2025",
+      "position": "Chatbot Developer",
+      "empresa": "SEO ARG",
+      "comentarios_personales": "En este rol me enfoqué en el desarrollo de soluciones conversacionales a medida. Diseñé chatbots capaces de gestionar clientes y conectarse con sistemas previos de las empresas, incorporando bases de datos para recopilar información valiosa que luego sería procesada mediante ciencia de datos. Fue un trabajo minucioso de ajuste de identidad digital, donde utilicé diversos scripts y APIs para cumplir con las demandas específicas de cada flujo de atención.",
+      "tags": ["Python", "JavaScript", "BotMaker", "APIs", "Data Science"],
+      "type": "dev"
+    },
+    {
+      "id": 7,
+      "init_time": "2024",
+      "end_time": "2025",
+      "position": "Full Stack Developer - Sistemas Embebidos",
+      "empresa": "OLTMyAdmin",
+      "comentarios_personales": "Tuve la oportunidad de formar parte de una startup tecnológica en un proyecto sumamente innovador: el desarrollo de un SaaS completo orientado a la gestión de equipos de redes. Trabajé en todo el ciclo, desde la concepción de la infraestructura base hasta el servicio final que recibe el cliente. Junto al equipo, logramos construir demos sólidas y funcionalidades completas, integrando hardware, software propietario y entornos de red escalables. Lamentablemente, el proyecto quedó pausado por falta de equipamiento técnico para el desarrollo antes de lanzar el producto al mercado, pero la experiencia adquirida fue invaluable para mi crecimiento profesional.",
+      "tags": ["Flutter", "Node.js", "Docker", "Sistemas Embebidos", "Networking", "SysDev", "Full Stack", "Linux"],
+      "type": "dev"
+    },
+    {
+      "id": 6,
+      "init_time": "2023",
+      "end_time": "2024",
+      "position": "Soporte Técnico de Redes",
+      "empresa": "Internet Plus",
+      "comentarios_personales": "Al finalizar mi formación universitaria, ingresé al mundo de los ISP brindando soporte técnico en redes. Más allá de los requerimientos técnicos diarios, esta etapa fue fundamental para pulir mis habilidades blandas: el trato directo con las personas y la resolución de problemas bajo presión. Me permitió conocer desde adentro el funcionamiento integral de una empresa proveedora de internet y lo que implica mantener un servicio activo para miles de usuarios.",
+      "tags": ["Networking", "Habilidades de Comunicación", "Habilidades blandas", "Servicio Técnico"],
+      "type": "infra"
+    },
+    {
+      "id": 5,
+      "init_time": "2023",
+      "end_time": "2023",
+      "position": "Desarrollador FrontEnd",
+      "empresa": "Finnegans",
+      "comentarios_personales": "Me incorporé mediante un contrato temporal para integrar el equipo de desarrollo de una billetera virtual. Trabajando bajo metodologías ágiles (Scrum), participaba en dailys y seguía estándares modernos de desarrollo de software. Mi foco estuvo en el FrontEnd utilizando Angular y gestionando el despliegue con Nginx, asegurando interfaces fluidas y un código mantenible dentro de un entorno corporativo.",
+      "tags": ["Angular", "Nginx", "Git", "Scrum", "Metodologías Ágiles"],
+      "type": "dev"
+    },
+    {
+      "id": 4,
+      "init_time": "2021",
+      "end_time": "2022",
+      "position": "Director de Proyecto",
+      "empresa": "TecnoBross",
+      "comentarios_personales": "En esta etapa asumí la responsabilidad de gestionar y dirigir los proyectos que ingresaban a la empresa. Mi labor abarcó desde el desarrollo de portales web hasta plataformas de gestión personalizadas, adaptándolas a la presencia digital, el mensaje y la intención de cada cliente. Además de la dirección técnica, me encargué de realizar capacitaciones a clientes y personal interno sobre el uso de los componentes web dedicados que desarrollábamos, como también sobre las buenas prácticas de seguridad informática para proteger sus activos digitales.",
+      "tags": ["Gestión de Proyectos", "Ciberseguridad", "Capacitaciones", "Liderazgo", "Logística", "Planificación", "WordPress", "Desarrollo Web", "Bases de Datos", "Diseño UX/UI"],
+      "type": "mgmt"
+    },
+    {
+      "id": 3,
+      "init_time": "2020",
+      "end_time": "Actualidad",
+      "position": "Desarrollador y Gestor de Sistemas",
+      "empresa": "Autónomo",
+      "comentarios_personales": "Como trabajador independiente, he gestionado diversos contratos enfocados en dar soluciones técnicas a medida. He tenido la oportunidad de trabajar en la creación de sistemas de monitoreo, bases de datos y scripts de automatización, integración y desarrollo de APIs, entre otras soluciones que sean autónomas y estén bien documentadas. Mi compromiso va más allá de la entrega inicial, ya que continúo brindando asistencia y monitoreo remoto para asegurar el servicio que junto con los sistemas evolucionen acorde con las necesidades del cliente.",
+      "tags": ["Python", "JavaScript", "Bases de Datos", "Automatización", "API", "Sistemas Propietarios", "Monitoreo", "SysDev", "Servicio Técnico"],
+      "type": "dev"
     },
     {
       "id": 2,
       "init_time": "2020",
-      "end_time": "2022",
-      "position": "Desarrollador Backend",
-      "empresa": "Software Factory",
-      "comentarios_personales": "Mantenimiento de APIs críticas y automatización de backups mediante scripts en Python.",
-      "tags": ["Python", "SQL", "API"],
-      "type": "dev"
+      "end_time": "Actualidad",
+      "position": "Servicio Técnico Informático",
+      "empresa": "Autónomo",
+      "comentarios_personales": "A la par de mi labor como desarrollador, mantengo una cartera de clientes de confianza que recurren a mí para el mantenimiento correctivo y preventivo de sus equipos. Me encargo de la instalación, reparación y optimización de hardware, estableciendo una relación basada en la confianza y el conocimiento técnico profundo de sus estaciones de trabajo y neces.",
+      "tags": ["Hardware", "Software", "Mantenimiento", "Reparación", "Servicio Técnico"],
+      "type": "infra"
+    },
+    {
+      "id": 1,
+      "init_time": "2016",
+      "end_time": "2021",
+      "position": "Ayudante de Cátedra - Programación I",
+      "empresa": "UTN FRCON",
+      "comentarios_personales": "Durante mis años universitarios, formé parte activa del equipo docente de la cátedra de Programación I. Mi rol consistía en brindar asistencia directa a los alumnos en sus primeros pasos con la programación, compartiendo ideas y opiniones para mejorar la dinámica de aprendizaje. Fue una experiencia enriquecedora donde no solo enseñé Python y lógica, sino que aprendí a transmitir conceptos complejos de una forma clara y colaborativa.",
+      "tags": ["Python", "Docencia", "Mentoría", "Habilidades de Comunicación"],
+      "type": "edu"
     }
   ]
 }
