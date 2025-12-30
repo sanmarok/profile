@@ -81,6 +81,8 @@ const app = {
             app.renderExperience();
         }
 
+        if (path === 'formacion' || path === 'formation') app.renderFormation();
+
         // Actualizar la etiqueta del botón de idioma
         const label = document.getElementById('lang-label');
         if (label) label.innerText = app.currentLang.toUpperCase();
@@ -100,10 +102,8 @@ const app = {
             app.translateDOM(contentArea);
             
             // 3. LÓGICA ESPECÍFICA: Si la página es experiencia, disparamos el renderizado dinámico
-            if (slug === 'experiencia' || slug === 'experience') {
-                app.renderExperience();
-            }
-
+            if (slug === 'experiencia' || slug === 'experience') app.renderExperience();
+            if (slug === 'formacion' || slug === 'formation') app.renderFormation();
             // 4. Manejo del historial y URL
             if (addToHistory) {
                 const url = slug === 'home' ? '/' : `/${slug}`;
@@ -287,6 +287,69 @@ const app = {
             edu: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`
         };
         return icons[type] || icons.dev;
+    },
+
+    // --- DENTRO DEL OBJETO APP ---
+
+    renderFormation: () => {
+        const container = document.getElementById('formation-list');
+        const searchInput = document.getElementById('formation-search');
+        const data = app.translations.formation;
+
+        if (!container || !data) return;
+
+        const drawList = (filteredData) => {
+            container.innerHTML = filteredData.map(item => `
+                <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-300">
+                    <button onclick="this.parentElement.classList.toggle('is-open')" 
+                            class="w-full flex items-center justify-between p-5 text-left group">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600">
+                                ${app.getFormationIcon(item.type)}
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">${item.position}</h3>
+                                <p class="text-sm text-slate-500">${item.init_time} — ${item.end_time}</p>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform group-[.is-open]:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out [[.is-open]_&]:max-h-[500px]">
+                        <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-700/50">
+                            <p class="text-indigo-500 font-medium mb-2 mt-4">${item.empresa}</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                                ${item.comentarios_personales}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        };
+
+        // Buscador de formación
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = data.filter(f => 
+                    f.position.toLowerCase().includes(query) || 
+                    f.empresa.toLowerCase().includes(query)
+                );
+                drawList(filtered);
+            });
+        }
+
+        drawList(data);
+    },
+
+    getFormationIcon: (type) => {
+        const icons = {
+            degree: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`,
+            cert: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>`
+        };
+        return icons[type] || icons.degree;
     }
 };
 

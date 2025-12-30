@@ -1,6 +1,9 @@
 {
   "ui": {
-    "search_experience": "Search by position, company or technology..."
+    "search_experience": "Search...",
+    "experience_intro": "My professional journey reflects my curiosity to understand how systems work from the inside out. I have navigated through software development, project management, and network infrastructure, always with the same premise: building solid, scalable solutions and being there to ensure their technical evolution.",
+    "search_formation": "Search...",
+    "formation_intro": "My academic background and technical certifications. A record of my continuous learning journey to understand the foundations of engineering and new technologies."
   },
   "home": {
     "hi": "Hi, I'm",
@@ -9,7 +12,7 @@
   "nodes": {
     "about": "About Me",
     "experience": "Experience",
-    "education": "Education",
+    "formation": "Formation",
     "projects": "Projects",
     "skills": "Skills",
     "technologies": "Technologies",
@@ -21,24 +24,105 @@
   },
   "experience": [
     {
-      "id": 1,
-      "init_time": "2022",
+      "id": 9,
+      "init_time": "2025",
       "end_time": "Present",
-      "position": "SysAdmin & DevOps",
-      "empresa": "TecnoSoluciones S.A.",
-      "comentarios_personales": "Led the migration of local services to Docker containers, optimizing deployment by 40%.",
-      "tags": ["Linux", "Docker", "Nginx"],
+      "position": "SysAdmin & Network Infrastructure",
+      "empresa": "Internet Plus",
+      "comentarios_personales": "Given the performance and commitment I showed in technical support, I was entrusted with the opportunity to join the ISP's service infrastructure team. Currently, I am responsible for maintaining, controlling, and monitoring the core network, always seeking to propose improvements and solutions to complex infrastructure problems. I have deepened my knowledge in the systems used, facing a constant challenge where I put my technical skills into practice to ensure the stability of a massive service.",
+      "tags": ["SysDev", "SysAdmin", "Networking", "IPTV", "ISDBT", "Proprietary Systems", "Monitoring", "Embedded Systems"],
       "type": "infra"
+    },
+    {
+      "id": 8,
+      "init_time": "2025",
+      "end_time": "2025",
+      "position": "Chatbot Developer",
+      "empresa": "SEO ARG",
+      "comentarios_personales": "In this role, I focused on the development of custom conversational solutions. I designed chatbots capable of managing customers and connecting with pre-existing company systems, incorporating databases to gather valuable information later processed through data science. It was a meticulous task of digital identity adjustment, where I used various scripts and APIs to meet specific customer service flow demands.",
+      "tags": ["Python", "JavaScript", "BotMaker", "APIs", "Data Science"],
+      "type": "dev"
+    },
+    {
+      "id": 7,
+      "init_time": "2024",
+      "end_time": "2025",
+      "position": "Full Stack Developer - Embedded Systems",
+      "empresa": "OLTMyAdmin",
+      "comentarios_personales": "I had the opportunity to be part of a tech startup in a highly innovative project: the development of a full SaaS oriented toward network equipment management. I worked through the entire cycle, from base infrastructure conception to the final service received by the customer. Along with the team, we built solid demos and full functionalities, integrating hardware, proprietary software, and scalable network environments. Unfortunately, the project was paused due to a lack of technical development equipment before launching the product, but the experience gained was invaluable to my professional growth.",
+      "tags": ["Flutter", "Node.js", "Docker", "Embedded Systems", "Networking", "SysDev", "Full Stack", "Linux"],
+      "type": "dev"
+    },
+    {
+      "id": 6,
+      "init_time": "2023",
+      "end_time": "2024",
+      "position": "Network Technical Support",
+      "empresa": "Internet Plus",
+      "comentarios_personales": "After finishing my university education, I entered the ISP world providing network technical support. Beyond the daily technical requirements, this stage was fundamental for polishing my soft skills: direct interaction with people and problem-solving under pressure. It allowed me to get an inside look at the integral functioning of an internet provider and what it takes to maintain an active service for thousands of users.",
+      "tags": ["Networking", "Communication Skills", "Technical Service", "ISP"],
+      "type": "infra"
+    },
+    {
+      "id": 5,
+      "init_time": "2023",
+      "end_time": "2023",
+      "position": "FrontEnd Developer",
+      "empresa": "Finnegans",
+      "comentarios_personales": "I joined through a temporary contract to be part of the development team for a virtual wallet. Working under agile methodologies (Scrum), I participated in dailies and followed modern software development standards. My focus was on the FrontEnd using Angular and managing deployment with Nginx, ensuring smooth interfaces and maintainable code within a corporate environment.",
+      "tags": ["Angular", "Nginx", "Git", "Scrum", "Agile Methodologies"],
+      "type": "dev"
+    },
+    {
+      "id": 4,
+      "init_time": "2021",
+      "end_time": "2022",
+      "position": "Project Director",
+      "empresa": "TecnoBross",
+      "comentarios_personales": "During this stage, I took on the responsibility of managing and directing projects coming into the company. My work ranged from developing web portals to custom management platforms, adapting them to the digital presence, message, and intent of each client. In addition to technical direction, I was in charge of training clients and internal staff on the use of the dedicated web components we developed, as well as on cybersecurity best practices to protect their digital assets.",
+      "tags": ["Project Management", "Cybersecurity", "Training", "Leadership", "Logistics", "Planning", "WordPress", "Web Development", "Databases", "UX/UI Design"],
+      "type": "mgmt"
+    },
+    {
+      "id": 3,
+      "init_time": "2020",
+      "end_time": "Present",
+      "position": "Systems Developer & Manager",
+      "empresa": "Freelance",
+      "comentarios_personales": "As an independent worker, I managed various contracts focused on providing custom technical solutions. I have had the opportunity to work on creating monitoring systems, databases, automation scripts, and API integration/development, among other solutions that are autonomous and well-documented. My commitment goes beyond the initial delivery, as I continue providing assistance and remote monitoring to ensure the service and systems evolve according to the customer's needs.",
+      "tags": ["Python", "JavaScript", "Databases", "Automation", "APIs", "Proprietary Systems", "Monitoring", "SysDev", "Technical Service"],
+      "type": "dev"
     },
     {
       "id": 2,
       "init_time": "2020",
-      "end_time": "2022",
-      "position": "Backend Developer",
-      "empresa": "Software Factory",
-      "comentarios_personales": "Maintenance of critical APIs and backup automation using Python scripts.",
-      "tags": ["Python", "SQL", "API"],
-      "type": "dev"
+      "end_time": "Present",
+      "position": "IT Technical Service",
+      "empresa": "Freelance",
+      "comentarios_personales": "Alongside my work as a developer, I maintain a portfolio of trusted clients who turn to me for corrective and preventive maintenance of their equipment. I am responsible for hardware installation, repair, and optimization, establishing a relationship based on trust and deep technical knowledge of their workstations and specific needs.",
+      "tags": ["Hardware", "Software", "Maintenance", "Repair", "Technical Service"],
+      "type": "infra"
+    },
+    {
+      "id": 1,
+      "init_time": "2016",
+      "end_time": "2021",
+      "position": "Teaching Assistant - Programming I",
+      "empresa": "UTN FRCON",
+      "comentarios_personales": "During my university years, I was an active member of the teaching team for the Programming I department. My role consisted of providing direct assistance to students in their first steps with programming, sharing ideas and opinions to improve the learning dynamic. It was an enriching experience where I not only taught Python and logic but also learned to convey complex concepts in a clear and collaborative way.",
+      "tags": ["Python", "Teaching", "Mentoring", "Communication Skills"],
+      "type": "edu"
+    }
+  ],
+  "formation": [
+    {
+      "id": 1,
+      "init_time": "2015",
+      "end_time": "2024",
+      "position": "Information Systems Engineering",
+      "empresa": "UTN Facultad Regional Concordia",
+      "comentarios_personales": "Full degree program, where I acquired the foundations of logic, algorithms, networking, and project management. This stage was key to developing analytical thinking and the ability to solve complex problems from a solid theoretical basis.",
+      "type": "degree"
     }
   ]
 }

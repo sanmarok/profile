@@ -1,6 +1,9 @@
 {
   "ui": {
-    "search_experience": "Buscar por cargo, empresa o tecnología..."
+    "search_experience": "Buscar...",
+    "experience_intro": "Mi trayectoria profesional es el reflejo de mi curiosidad por entender cómo funcionan los sistemas desde adentro. He transitado por el desarrollo de software, la gestión de proyectos y la infraestructura de redes, siempre con la misma premisa: construir soluciones sólidas, escalables y estar presente para asegurar su evolución técnica.",
+    "search_formation": "Buscar...",
+    "formation_intro": "Mi formación académica y certificaciones técnicas. Un registro de mi aprendizaje continuo para entender las bases de la ingeniería y las nuevas tecnologías."
   },
   "home": {
     "hi": "Hola, soy",
@@ -9,7 +12,7 @@
   "nodes": {
     "about": "Sobre Mí",
     "experience": "Experiencia",
-    "education": "Formación",
+    "formation": "Formación",
     "projects": "Proyectos",
     "skills": "Habilidades",
     "technologies": "Tecnologías",
@@ -26,8 +29,8 @@
       "end_time": "Actualidad",
       "position": "SysAdmin e Infraestructura de Redes",
       "empresa": "Internet Plus",
-      "comentarios_personales": "Dado el desempeño y compromiso que demostré en soporte técnico, se me confió la oportunidad de integrarme al equipo de infraestructura de servicios del ISP. Actualmente me encargo de mantener, controlar y monitorear el núcleo de la red, buscando siempre proponer mejoras y soluciones a problemas complejos de infraestructura. He profundizado mis conocimientos en sistemas críticos como IPTV e ISDBT, enfrentando un desafío constante donde pongo en práctica mis capacidades técnicas para garantizar la estabilidad de un servicio masivo.",
-      "tags": ["DevSys", "SysAdmin", "Networking", "IPTV", "ISDBT", "Sistemas Propietarios"],
+      "comentarios_personales": "Dado el desempeño y compromiso que demostré en soporte técnico, se me confió la oportunidad de integrarme al equipo de infraestructura de servicios del ISP. Actualmente me encargo de mantener, controlar y monitorear el núcleo de la red, buscando siempre proponer mejoras y soluciones a problemas complejos de infraestructura. He profundizado mis conocimientos en los sistemas utilizados, enfrentando un desafío constante donde pongo en práctica mis capacidades técnicas para garantizar la estabilidad de un servicio masivo.",
+      "tags": ["SysDev", "SysAdmin", "Networking", "IPTV", "ISDBT", "Sistemas Propietarios", "Monitoreo", "Sistemas Embebidos"],
       "type": "infra"
     },
     {
@@ -57,7 +60,7 @@
       "position": "Soporte Técnico de Redes",
       "empresa": "Internet Plus",
       "comentarios_personales": "Al finalizar mi formación universitaria, ingresé al mundo de los ISP brindando soporte técnico en redes. Más allá de los requerimientos técnicos diarios, esta etapa fue fundamental para pulir mis habilidades blandas: el trato directo con las personas y la resolución de problemas bajo presión. Me permitió conocer desde adentro el funcionamiento integral de una empresa proveedora de internet y lo que implica mantener un servicio activo para miles de usuarios.",
-      "tags": ["Networking", "Habilidades de Comunicación", "Habilidades blandas", "Servicio Técnico"],
+      "tags": ["Networking", "Habilidades de Comunicación", "Servicio Técnico", "ISP"],
       "type": "infra"
     },
     {
@@ -87,7 +90,7 @@
       "position": "Desarrollador y Gestor de Sistemas",
       "empresa": "Autónomo",
       "comentarios_personales": "Como trabajador independiente, he gestionado diversos contratos enfocados en dar soluciones técnicas a medida. He tenido la oportunidad de trabajar en la creación de sistemas de monitoreo, bases de datos y scripts de automatización, integración y desarrollo de APIs, entre otras soluciones que sean autónomas y estén bien documentadas. Mi compromiso va más allá de la entrega inicial, ya que continúo brindando asistencia y monitoreo remoto para asegurar el servicio que junto con los sistemas evolucionen acorde con las necesidades del cliente.",
-      "tags": ["Python", "JavaScript", "Bases de Datos", "Automatización", "API", "Sistemas Propietarios", "Monitoreo", "SysDev", "Servicio Técnico"],
+      "tags": ["Python", "JavaScript", "Bases de Datos", "Automatización", "APIs", "Sistemas Propietarios", "Monitoreo", "SysDev", "Servicio Técnico"],
       "type": "dev"
     },
     {
@@ -96,7 +99,7 @@
       "end_time": "Actualidad",
       "position": "Servicio Técnico Informático",
       "empresa": "Autónomo",
-      "comentarios_personales": "A la par de mi labor como desarrollador, mantengo una cartera de clientes de confianza que recurren a mí para el mantenimiento correctivo y preventivo de sus equipos. Me encargo de la instalación, reparación y optimización de hardware, estableciendo una relación basada en la confianza y el conocimiento técnico profundo de sus estaciones de trabajo y neces.",
+      "comentarios_personales": "A la par de mi labor como desarrollador, mantengo una cartera de clientes de confianza que recurren a mí para el mantenimiento correctivo y preventivo de sus equipos. Me encargo de la instalación, reparación y optimización de hardware, estableciendo una relación basada en la confianza y el conocimiento técnico profundo de sus estaciones de trabajo y necesidades particulares.",
       "tags": ["Hardware", "Software", "Mantenimiento", "Reparación", "Servicio Técnico"],
       "type": "infra"
     },
@@ -109,6 +112,17 @@
       "comentarios_personales": "Durante mis años universitarios, formé parte activa del equipo docente de la cátedra de Programación I. Mi rol consistía en brindar asistencia directa a los alumnos en sus primeros pasos con la programación, compartiendo ideas y opiniones para mejorar la dinámica de aprendizaje. Fue una experiencia enriquecedora donde no solo enseñé Python y lógica, sino que aprendí a transmitir conceptos complejos de una forma clara y colaborativa.",
       "tags": ["Python", "Docencia", "Mentoría", "Habilidades de Comunicación"],
       "type": "edu"
+    }
+  ],
+"formation": [
+    {
+      "id": 1,
+      "init_time": "2015",
+      "end_time": "2024",
+      "position": "Ingeniería en Sistemas de Información",
+      "empresa": "UTN Facultad Regional Concordia",
+      "comentarios_personales": "Cursado completo de la carrera, donde adquirí las bases de la lógica, algoritmos, redes y gestión de proyectos. Esta etapa fue clave para desarrollar un pensamiento analítico y la capacidad de resolver problemas complejos desde una base teórica sólida.",
+      "type": "degree"
     }
   ]
 }
