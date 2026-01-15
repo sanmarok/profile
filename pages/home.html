@@ -11,7 +11,7 @@
 
         <div class="relative z-10 flex flex-col gap-4 w-full md:block h-full px-4">
 
-            <div onclick="app.loadPage('sobre-mi')"
+            <div onclick="app.loadPage('me')"
                 class="order-first md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-20 cursor-pointer group">
                 <div class="bg-blue-600 dark:bg-blue-500 transition-transform duration-300 group-hover:scale-105
                             flex items-center gap-4 p-4 md:p-0 
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div onclick="app.loadPage('proyectos')"
+            <!-- <div onclick="app.loadPage('proyectos')"
                 class="md:absolute md:bottom-[25%] md:right-[10%] md:w-56 node-card">
                 <div class="inner-node border-emerald-500/30">
                     <div class="icon-box bg-emerald-500">
@@ -70,9 +70,9 @@
                     </div>
                     <span data-i18n="nodes.projects" class="node-text"></span>
                 </div>
-            </div>
+            </div> -->
 
-            <div onclick="app.loadPage('habilidades')"
+            <!-- <div onclick="app.loadPage('habilidades')"
                 class="md:absolute md:bottom-[5%] md:left-1/2 md:-translate-x-1/2 md:w-56 node-card">
                 <div class="inner-node border-orange-500/30">
                     <div class="icon-box bg-orange-500">
@@ -84,10 +84,25 @@
                     </div>
                     <span data-i18n="nodes.skills" class="node-text"></span>
                 </div>
-            </div>
+            </div> -->
 
-            <div onclick="app.loadPage('tecnologias')"
+            <!-- <div onclick="app.loadPage('technologies')"
                 class="md:absolute md:bottom-[25%] md:left-[10%] md:w-56 node-card">
+                <div class="inner-node border-indigo-500/30">
+                    <div class="icon-box bg-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <span data-i18n="nodes.technologies" class="node-text"></span>
+                </div>
+            </div> -->
+
+
+            <div onclick="app.loadPage('technologies')"
+                class="md:absolute md:top-[25%] md:left-[10%] md:w-56 node-card">
                 <div class="inner-node border-indigo-500/30">
                     <div class="icon-box bg-indigo-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -100,7 +115,8 @@
                 </div>
             </div>
 
-            <div onclick="app.loadPage('intereses')" class="md:absolute md:top-[25%] md:left-[10%] md:w-56 node-card">
+
+            <!-- <div onclick="app.loadPage('intereses')" class="md:absolute md:top-[25%] md:left-[10%] md:w-56 node-card">
                 <div class="inner-node border-amber-500/30">
                     <div class="icon-box bg-amber-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -111,7 +127,7 @@
                     </div>
                     <span data-i18n="nodes.interests" class="node-text"></span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 </div>

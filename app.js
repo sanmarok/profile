@@ -7,7 +7,7 @@ const app = {
     translations: {},
     isMusicPlaying: false,
     currentTrackIndex: 0,
-    
+
     // Tu lista de reproducción personalizada
     playlist: [
         { name: "Lofi Study Beats", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
@@ -19,10 +19,10 @@ const app = {
     init: async () => {
         app.applyTheme();
         await app.loadTranslations();
-        
+
         // Carga de componentes estables
         await app.loadComponent('navbar-placeholder', 'navbar');
-        
+
         // Manejo de ruteo inicial
         let path = window.location.pathname.split('/')[1];
         if (!path || path === 'index.html') path = 'home';
@@ -33,7 +33,7 @@ const app = {
             // Usamos la traducción cargada en lugar de texto estático
             const msg = app.translations.player.toast_msg;
             app.showMusicToast(msg);
-            
+
             setTimeout(async () => {
                 await app.loadComponent('player-placeholder', 'player');
                 app.initPlayer();
@@ -57,8 +57,8 @@ const app = {
             const key = el.getAttribute('data-i18n');
             const text = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), app.translations);
             if (text) {
-                el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' 
-                    ? el.placeholder = text 
+                el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'
+                    ? el.placeholder = text
                     : el.innerHTML = text;
             }
         });
@@ -76,40 +76,46 @@ const app = {
         // 3. ACTUALIZACIÓN DINÁMICA:
         // Detectamos en qué página estamos para re-renderizar si es necesario
         const path = window.location.pathname.split('/')[1] || 'home';
-        
+
         if (path === 'experiencia' || path === 'experience') {
             app.renderExperience();
         }
 
         if (path === 'formacion' || path === 'formation') app.renderFormation();
+        if (path === 'tecnologias' || path === 'technologies') app.renderTechnologies();
+        if (path === 'sobre-mi' || path === 'me') app.renderMe();
 
         // Actualizar la etiqueta del botón de idioma
         const label = document.getElementById('lang-label');
         if (label) label.innerText = app.currentLang.toUpperCase();
     },
 
-        // --- NAVEGACIÓN Y COMPONENTES ---
+    // --- NAVEGACIÓN Y COMPONENTES ---
     loadPage: async (slug, addToHistory = true) => {
         const contentArea = document.getElementById('main-content');
         try {
             const res = await fetch(`/pages/${slug}.html`);
             if (!res.ok) throw new Error("404");
-            
+
             // 1. Inyectamos el HTML base de la página
             contentArea.innerHTML = await res.text();
-            
+
             // 2. Traducimos las etiquetas estáticas (títulos, placeholders, etc.)
             app.translateDOM(contentArea);
-            
+
             // 3. LÓGICA ESPECÍFICA: Si la página es experiencia, disparamos el renderizado dinámico
             if (slug === 'experiencia' || slug === 'experience') app.renderExperience();
             if (slug === 'formacion' || slug === 'formation') app.renderFormation();
+            if (slug === 'tecnologias' || slug === 'technologies') app.renderTechnologies();
+            if (slug === 'sobre-mi' || slug === 'me') app.renderMe();
+
+
             // 4. Manejo del historial y URL
             if (addToHistory) {
                 const url = slug === 'home' ? '/' : `/${slug}`;
                 window.history.pushState({ slug }, slug, url);
             }
-            
+
             window.scrollTo(0, 0);
         } catch (err) {
             contentArea.innerHTML = `
@@ -135,7 +141,7 @@ const app = {
 
     // --- UI Y TEMAS ---
     applyTheme: () => {
-        if (localStorage.getItem('theme') === 'dark' || 
+        if (localStorage.getItem('theme') === 'dark' ||
             (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         }
@@ -157,7 +163,7 @@ const app = {
             <span class="dark:text-white">${message}</span>
         `;
         document.body.appendChild(toast);
-        
+
         // Iniciar desvanecimiento a los 4.5 segundos
         setTimeout(() => {
             toast.classList.remove('fade-in-up');
@@ -173,12 +179,12 @@ const app = {
             // Pausar música si se cierra el reproductor
             const audio = document.getElementById('main-audio');
             if (audio) audio.pause();
-            
+
             player.classList.add('fade-out');
             setTimeout(() => player.remove(), 500);
         }
     },
-    
+
     // ... resto de funciones de música ...
 
     // Actualiza esta función en tu app.js
@@ -192,7 +198,7 @@ const app = {
         // Cargar la canción elegida al azar
         audio.src = app.playlist[app.currentTrackIndex].url;
         audio.volume = 0.4; // Volumen moderado por defecto
-        
+
         // Actualizar el nombre en la interfaz
         const trackNameEl = document.getElementById('track-name');
         if (trackNameEl) {
@@ -220,17 +226,17 @@ const app = {
         app.isMusicPlaying = !app.isMusicPlaying;
     },
 
-   renderExperience: () => {
-    const container = document.getElementById('experience-list');
-    const searchInput = document.getElementById('experience-search');
-    
-    // Aseguramos que use app.translations (la variable donde guardas el JSON)
-    const data = app.translations.experience;
+    renderExperience: () => {
+        const container = document.getElementById('experience-list');
+        const searchInput = document.getElementById('experience-search');
 
-    if (!container || !data) return;
+        // Aseguramos que use app.translations (la variable donde guardas el JSON)
+        const data = app.translations.experience;
 
-    const drawList = (filteredData) => {
-        container.innerHTML = filteredData.map(exp => `
+        if (!container || !data) return;
+
+        const drawList = (filteredData) => {
+            container.innerHTML = filteredData.map(exp => `
             <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-300">
                 <button onclick="this.parentElement.classList.toggle('is-open')" 
                         class="w-full flex items-center justify-between p-5 text-left group">
@@ -261,14 +267,14 @@ const app = {
                 </div>
             </div>
         `).join('');
-    };
+        };
 
         // Buscador
         if (searchInput) {
             searchInput.addEventListener('input', (e) => {
                 const query = e.target.value.toLowerCase();
-                const filtered = data.filter(exp => 
-                    exp.position.toLowerCase().includes(query) || 
+                const filtered = data.filter(exp =>
+                    exp.position.toLowerCase().includes(query) ||
                     exp.empresa.toLowerCase().includes(query) ||
                     exp.tags.some(t => t.toLowerCase().includes(query))
                 );
@@ -289,8 +295,6 @@ const app = {
         return icons[type] || icons.dev;
     },
 
-    // --- DENTRO DEL OBJETO APP ---
-
     renderFormation: () => {
         const container = document.getElementById('formation-list');
         const searchInput = document.getElementById('formation-search');
@@ -300,47 +304,52 @@ const app = {
 
         const drawList = (filteredData) => {
             container.innerHTML = filteredData.map(item => `
-                <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-300">
-                    <button onclick="this.parentElement.classList.toggle('is-open')" 
-                            class="w-full flex items-center justify-between p-5 text-left group">
-                        <div class="flex items-center gap-4">
-                            <div class="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600">
-                                ${app.getFormationIcon(item.type)}
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 dark:text-white">${item.position}</h3>
-                                <p class="text-sm text-slate-500">${item.init_time} — ${item.end_time}</p>
-                            </div>
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden mb-4 transition-all duration-300">
+                <button onclick="this.parentElement.classList.toggle('is-open')" 
+                        class="w-full flex items-center justify-between p-5 text-left group">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600">
+                            ${app.getFormationIcon(item.type)}
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform group-[.is-open]:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out [[.is-open]_&]:max-h-[500px]">
-                        <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-700/50">
-                            <p class="text-indigo-500 font-medium mb-2 mt-4">${item.empresa}</p>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                                ${item.comentarios_personales}
-                            </p>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg">${item.position}</h3>
+                            <p class="text-sm text-slate-500">${item.init_time} — ${item.end_time}</p>
                         </div>
                     </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform group-[.is-open]:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out [[.is-open]_&]:max-h-[500px]">
+                    <div class="p-5 pt-0 border-t border-slate-100 dark:border-slate-700/50">
+                        <p class="text-indigo-500 font-medium mb-2 mt-4 text-sm">${item.empresa}</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                            ${item.comentarios_personales}
+                        </p>
+                    </div>
                 </div>
-            `).join('');
+            </div>
+        `).join('');
         };
 
         // Buscador de formación
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
+            // Removemos listeners previos para evitar duplicados si se llama varias veces
+            const newSearchInput = searchInput.cloneNode(true);
+            searchInput.parentNode.replaceChild(newSearchInput, searchInput);
+
+            newSearchInput.addEventListener('input', (e) => {
                 const query = e.target.value.toLowerCase();
-                const filtered = data.filter(f => 
-                    f.position.toLowerCase().includes(query) || 
+                const filtered = data.filter(f =>
+                    f.position.toLowerCase().includes(query) ||
                     f.empresa.toLowerCase().includes(query)
                 );
                 drawList(filtered);
             });
         }
 
+        // LLAMADA VITAL: Dibuja la lista inicialmente
         drawList(data);
     },
 
@@ -350,10 +359,97 @@ const app = {
             cert: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>`
         };
         return icons[type] || icons.degree;
+    },
+
+    renderTechnologies: () => {
+        const container = document.getElementById('tech-list');
+        const searchInput = document.getElementById('tech-search');
+        const data = app.translations.technologies;
+
+        if (!container || !data) return;
+
+        const drawList = (filteredData) => {
+            container.innerHTML = filteredData.map(tech => `
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden mb-4 transition-all duration-300">
+                <button onclick="this.parentElement.classList.toggle('is-open')" 
+                        class="w-full flex items-center justify-between p-5 text-left group">
+                    <div class="flex items-center gap-4">
+                        <div class="rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600">
+                            <i class="${tech.icon} text-3xl "></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg">${tech.name}</h3>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform group-[.is-open]:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out [[.is-open]_&]:max-h-[1000px]">
+                    <div class="border-t border-slate-100 dark:border-slate-700/50">
+                        
+                        <div class="p-5 pb-3">
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                ${tech.comment}
+                            </p>
+                        </div>
+
+                        <div class="px-5 pb-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                            ${tech.sub_items.map(sub => `
+                                <div class="flex flex-col items-center gap-2 group/sub">
+                                    <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-700 group-hover/sub:border-emerald-500 transition-all duration-300">
+                                        <i class="${sub.icon} text-2xl text-slate-400 dark:text-slate-500 group-hover/sub:colored transition-colors"></i>
+                                    </div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 group-hover/sub:text-emerald-500 text-center transition-colors">
+                                        ${sub.name}
+                                    </span>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        };
+
+        // Lógica del Buscador
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = data.filter(item =>
+                    item.name.toLowerCase().includes(query) ||
+                    item.sub_items.some(sub => sub.name.toLowerCase().includes(query))
+                );
+                drawList(filtered);
+            });
+        }
+
+        drawList(data);
+    },
+
+    renderMe: () => {
+        const contentArea = document.getElementById('main-content');
+        if (!contentArea) return;
+
+        // 1. Traducir textos
+        app.translateDOM(contentArea);
+
+        // 2. Animación de "Entrada Escalonada"
+        const elements = contentArea.querySelectorAll('header, section, footer');
+        elements.forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = `all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) ${i * 0.15}s`;
+
+            requestAnimationFrame(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        });
     }
 };
-
-// --- LISTENERS GLOBALES ---
 
 // Navegación atrás/adelante del navegador
 window.onpopstate = (e) => {

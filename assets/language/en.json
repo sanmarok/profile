@@ -3,7 +3,9 @@
     "search_experience": "Search...",
     "experience_intro": "My professional journey reflects my curiosity to understand how systems work from the inside out. I have navigated through software development, project management, and network infrastructure, always with the same premise: building solid, scalable solutions and being there to ensure their technical evolution.",
     "search_formation": "Search...",
-    "formation_intro": "My academic background and technical certifications. A record of my continuous learning journey to understand the foundations of engineering and new technologies."
+    "formation_intro": "My academic background and technical certifications. A record of my continuous learning journey to understand the foundations of engineering and new technologies.",
+    "search_tech": "Search...",
+    "technologies_intro": "This space isn't just a list of icons; it’s the journey of my technical curiosity. Here, you'll find the tools I chose to 'marry,' like Python, alongside those I mastered out of necessity —or the adrenaline— of solving critical problems in my career. It is my personal toolbox, forged between the code I was trained for and the professional demands that shaped me at every turn."
   },
   "home": {
     "hi": "Hi, I'm",
@@ -116,13 +118,245 @@
   ],
   "formation": [
     {
-      "id": 1,
-      "init_time": "2015",
-      "end_time": "2024",
-      "position": "Information Systems Engineering",
+      "id": 5,
+      "init_time": "2022",
+      "end_time": "2023",
+      "position": "University Technician in Programming",
       "empresa": "UTN Facultad Regional Concordia",
-      "comentarios_personales": "Full degree program, where I acquired the foundations of logic, algorithms, networking, and project management. This stage was key to developing analytical thinking and the ability to solve complex problems from a solid theoretical basis.",
+      "comentarios_personales": "With prior work experience, I decided to formally academicize my profession. I graduated with honors, consolidating my definitive transition into software development and IT systems. It was a time of gratitude and rediscovering my true technical calling.",
       "type": "degree"
+    },
+    {
+      "id": 3,
+      "init_time": "2022",
+      "end_time": "2022",
+      "position": "Web & Mobile App Development Diploma",
+      "empresa": "Carlos Slim Foundation",
+      "comentarios_personales": "Intensive training focused on the modern development stack. I covered the entire cycle: from server and database administration to Back-end and Front-end development. This diploma was key to mastering object-oriented programming and understanding how to create solid user experiences on web and mobile.",
+      "type": "cert"
+    },
+    {
+      "id": 2,
+      "init_time": "2022",
+      "end_time": "2022",
+      "position": "IT Systems Technician Diploma",
+      "empresa": "Carlos Slim Foundation",
+      "comentarios_personales": "An exhaustive program where I certified my technical operational skills. I focused on technical hardware support, data networking, and fiber optic installation. It allowed me to standardize my knowledge in IT security and maintenance under international IT industry standards.",
+      "type": "cert"
+    },
+    {
+      "id": 1,
+      "init_time": "2016",
+      "end_time": "2022",
+      "position": "Civil Engineering (Incomplete - 4th Year)",
+      "empresa": "UTN Facultad Regional Concordia",
+      "comentarios_personales": "I started my university path in this branch of engineering, completing subjects up to the 4th year. Although my life took a definitive turn toward systems, today I still appreciate and use the technical training and infrastructure vision obtained in this career. It was the foundation of my calculation and planning skills.",
+      "type": "degree"
+    },
+    {
+      "id": 4,
+      "init_time": "2025",
+      "end_time": "2025",
+      "position": "Fiber Optic Network Engineering (FTTH/GPON)",
+      "empresa": "FICOM",
+      "comentarios_personales": "High-level technical training focused on the complete lifecycle of outside plant (OSP) projects. The course covers everything from engineering design and field surveying to final execution and certification. I have deepened my knowledge in optical budget calculations, FTTH topologies, and advanced use of measurement instruments (OTDR/Power Meter), enabling me to technically lead the expansion and optimization of the ISP's fiber services.",
+      "type": "cert"
     }
-  ]
-}
+  ],
+  "technologies": [
+  {
+    "id": 1,
+    "name": "Python",
+    "icon": "devicon-python-plain",
+    "comment": "It’s the tool I feel most at home with; there’s always a library available to solve any challenge. I decided to dive deep and 'marry' this language. I’ve built APIs, scripts, automations, tests, and monitoring systems. Along the way, searching for these solutions taught me a great deal about network and system communication processes.",
+    "sub_items": [
+      { "name": "Django", "icon": "devicon-django-plain" },
+      { "name": "FastAPI", "icon": "devicon-fastapi-plain" },
+      { "name": "Flask", "icon": "devicon-flask-original" },
+      { "name": "Pandas", "icon": "devicon-pandas-plain" },
+      { "name": "Selenium", "icon": "devicon-selenium-original" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "icon": "devicon-javascript-plain",
+    "comment": "This is my second best language. It’s everywhere, and although I find it has more depth than Python, having to use it in so many scenarios led me to truly understand and master it. Nowadays, I primarily use it for API structures, requests, and dynamic integrations.",
+    "sub_items": [
+      { "name": "React", "icon": "devicon-react-original" },
+      { "name": "Axios", "icon": "devicon-javascript-plain" },
+      { "name": "AJAX", "icon": "devicon-javascript-plain" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Node.js",
+    "icon": "devicon-nodejs-plain",
+    "comment": "The 'almighty' Node.js. It was one of my first touchpoints with technical maintenance through package and update management. Today, it’s my go-to choice for deploying critical libraries, hosting services, and orchestrating modern backend processes.",
+    "sub_items": [
+      { "name": "Express", "icon": "devicon-express-original" },
+      { "name": "PM2", "icon": "devicon-nodejs-plain" },
+      { "name": "JWT", "icon": "devicon-nodejs-plain" },
+      { "name": "Socket.io", "icon": "devicon-nodejs-plain" },
+      { "name": "NPM", "icon": "devicon-npm-original-wordmark" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Networking",
+    "icon": "devicon-linux-plain",
+    "comment": "My time at the ISP and the need to deploy projects drove me to master how communications happen, learning standards, processes, and configuration media. It represents one of my greatest professional leaps: I went from hating networks to not being able to imagine my daily work without them, managing critical infrastructure and resolving major incidents.",
+    "sub_items": [
+      { "name": "MikroTik", "icon": "devicon-linux-plain" },
+      { "name": "Routing", "icon": "devicon-linux-plain" },
+      { "name": "Firewall", "icon": "devicon-ssh-original" },
+      { "name": "IP Services", "icon": "devicon-ssh-original" },
+      { "name": "PPPoE & Queues", "icon": "devicon-linux-plain" },
+      { "name": "DDoS Defense", "icon": "devicon-ssh-original" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Proxmox VE",
+    "icon": "devicon-proxmox-plain",
+    "comment": "Working at an ISP required me to manage various virtualization environments, which motivated me to dig deep into Proxmox and set up my own home lab. I understand that virtualizing equipment or deploying dedicated systems is often the answer to an organization's critical demands and an indispensable tool for maintaining safe, isolated test environments.",
+    "sub_items": [
+      { "name": "LXC Containers", "icon": "devicon-proxmox-plain" },
+      { "name": "KVM Virtualization", "icon": "devicon-proxmox-plain" },
+      { "name": "High Availability", "icon": "devicon-proxmox-plain" },
+      { "name": "ZFS & Storage", "icon": "devicon-proxmox-plain" },
+      { "name": "Backup & Replication", "icon": "devicon-proxmox-plain" },
+      { "name": "PVE Networking", "icon": "devicon-proxmox-plain" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Docker",
+    "icon": "devicon-docker-plain",
+    "comment": "Using containers transformed how I deploy solutions, allowing me to isolate processes and standardize environments regardless of the underlying infrastructure. It greatly improves the portability of my scripts and apps, ensuring that what I develop and test in my lab works identically in production environments.",
+    "sub_items": [
+      { "name": "Docker Compose", "icon": "devicon-docker-plain" },
+      { "name": "Dockerfile", "icon": "devicon-docker-plain" },
+      { "name": "Container Networking", "icon": "devicon-docker-plain" },
+      { "name": "Volume Management", "icon": "devicon-docker-plain" },
+      { "name": "Image Optimization", "icon": "devicon-docker-plain" },
+      { "name": "Portainer", "icon": "devicon-docker-plain" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Databases",
+    "icon": "devicon-sqlite-plain",
+    "comment": "I’ve had the opportunity to work with pre-existing architectures as well as designing my own from scratch. This experience has allowed me to specialize in performance diagnostics, understanding internal structures, and troubleshooting critical issues, giving me the technical judgment to decide which engine best suits each project's requirements.",
+    "sub_items": [
+      { "name": "MySQL", "icon": "devicon-mysql-plain" },
+      { "name": "MariaDB", "icon": "devicon-mariadb-original" },
+      { "name": "MongoDB", "icon": "devicon-mongodb-plain" },
+      { "name": "Redis", "icon": "devicon-redis-plain" },
+      { "name": "Database Design", "icon": "devicon-sqlite-plain" },
+      { "name": "Optimization", "icon": "devicon-sqlite-plain" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Grafana",
+    "icon": "devicon-grafana-plain",
+    "comment": "I adopted Grafana the moment a colleague showed me its potential; I was captivated by its versatility and have used it as a fundamental pillar of response for any visualization need ever since. It’s my primary tool for turning complex data into actionable dashboards, allowing me to manage real-time monitoring, alerts, and statistics for critical infrastructure.",
+    "sub_items": [
+      { "name": "InfluxDB", "icon": "devicon-influxdb-original" },
+      { "name": "Prometheus", "icon": "devicon-grafana-plain" },
+      { "name": "Alert Management", "icon": "devicon-grafana-plain" },
+      { "name": "Telegraf", "icon": "devicon-grafana-plain" },
+      { "name": "Time Series Analysis", "icon": "devicon-grafana-plain" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Flutter",
+    "icon": "devicon-flutter-plain",
+    "comment": "I learned it back when mobile apps were the primary demand from clients. It offers solid, fast, and versatile development with a great look and feel. Currently, I handle small to medium-scale applications when the project calls for it.",
+    "sub_items": [
+      { "name": "Dart", "icon": "devicon-dart-plain" },
+      { "name": "State Management", "icon": "devicon-flutter-plain" },
+      { "name": "API Integration", "icon": "devicon-javascript-plain" },
+      { "name": "Widgets Engine", "icon": "devicon-flutter-plain" },
+      { "name": "Material Design", "icon": "devicon-flutter-plain" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Firebase",
+    "icon": "devicon-firebase-plain",
+    "comment": "I utilized it when faced with a lack of in-house infrastructure for certain projects. It’s a powerful and rapid deployment solution, though it requires careful attention to costs as the project scales. If I had to deliver a demo in 48 hours, Firebase would be my safe bet for backend and hosting.",
+    "sub_items": [
+      { "name": "Firestore", "icon": "devicon-firebase-plain" },
+      { "name": "Auth", "icon": "devicon-firebase-plain" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "HTML",
+    "icon": "devicon-html5-plain",
+    "comment": "The essential foundation of web development. Not much to say here—you simply have to know how to use it.",
+    "sub_items": []
+  },
+  {
+    "id": 12,
+    "name": "CSS",
+    "icon": "devicon-css3-plain",
+    "comment": "I understand it and can work with it, but I haven't mastered it to perfection; frontend design is definitely not my strongest suit.",
+    "sub_items": []
+  },
+  {
+    "id": 13,
+    "name": "PHP",
+    "icon": "devicon-php-plain",
+    "comment": "Used for specific or flexible developments, as well as for maintaining legacy systems or those based on classic web structures.",
+    "sub_items": [
+      { "name": "Backend", "icon": "devicon-php-plain" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "WordPress",
+    "icon": "devicon-wordpress-plain",
+    "comment": "This was my first technology and the engine behind my first professional jobs. I consider it an incredibly solid solution for clients seeking a fixed digital presence or structures that don't require complex scalability, allowing for quick and functional deployments.",
+    "sub_items": [
+      { "name": "Elementor", "icon": "devicon-wordpress-plain" },
+      { "name": "WooCommerce", "icon": "devicon-wordpress-plain" },
+      { "name": "SEO Optimization", "icon": "devicon-wordpress-plain" },
+      { "name": "Security & Backup", "icon": "devicon-wordpress-plain" },
+      { "name": "Migrations", "icon": "devicon-wordpress-plain" },
+      { "name": "Custom Themes", "icon": "devicon-wordpress-plain" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "BotMaker",
+    "icon": "devicon-godot-plain",
+    "comment": "I am an implementer of this technology, which I consider a robust solution for optimizing the contact between a client and a service. It allows me to design intelligent conversation flows that automate processes, improving both user experience and organizational operational efficiency.",
+    "sub_items": [
+      { "name": "Flow Design", "icon": "devicon-godot-plain" },
+      { "name": "API Integrations", "icon": "devicon-javascript-plain" },
+      { "name": "NLP & AI", "icon": "devicon-godot-plain" },
+      { "name": "Omnichannel", "icon": "devicon-godot-plain" },
+      { "name": "Webhooks", "icon": "devicon-javascript-plain" }
+    ]
+  }
+],
+  "me": {
+    "name": "Santiago Martinez",
+    "handle": "MAOKATA",
+    "subtitle": "Driven by systems architecture",
+    "foundations_title": "Foundations",
+    "foundations_text": "At 28, I understand that technology is, above all, a form of construction. My professional path was initially forged in Civil Engineering. From that stage, I retain a structural vision: the conviction that no system can scale or endure without a solid and well-calculated foundation. That engineering mindset stays with me today in every line of code and every infrastructure design.",
+    "code_title": "Language and Logic",
+    "code_text": "I found in Python more than just a tool; I found an ally that I decided to 'marry' professionally. I enjoy the elegance of its syntax to solve complex problems, whether creating APIs, automating processes, or designing monitoring systems. My time as a university teaching assistant taught me that the best way to master logic is to have the ability to explain it in a simple and human way.",
+    "networks_title": "Networks and Infrastructure",
+    "networks_text": "My present is tied to the heartbeat of an ISP. As a SysAdmin, I manage the infrastructure that keeps people connected. The adrenaline of resolving mission-critical incidents and the satisfaction of seeing a stable network are what define my daily professional life. From resenting networks in my early days, I have come to a point where I cannot imagine my career without them, specializing today in virtualization and high-availability environments.",
+    "closing_quote": "I build solutions for systems to evolve, while always keeping the human element at the center of design.",
+    "age": "28 Years Old",
+    "location": "Argentina",
+    "future_title": "Future",
+    "future_text": "My focus is set on continuous evolution. I do not merely seek stability, but rather challenges that force me out of my comfort zone. My goal is to immerse myself in diverse architectures, learning from robust systems as well as those with flaws, as I understand that every mistake is a lesson. I seek to broaden my horizons to connect with other environments and continue building solutions."
+}}
