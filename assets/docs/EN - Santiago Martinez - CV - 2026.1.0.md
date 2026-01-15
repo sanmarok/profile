@@ -1,5 +1,9 @@
 # Santiago Martinez
-**SysAdmin | Programming Technician | Network Technician** *Concordia, Entre Ríos, Argentina | 28 years old* *Full-time availability | On-call availability* *Proprietary technical equipment and fully equipped remote workspace.* san.martinezok@gmail.com | +54 345 6268262
+**SysAdmin | Programming Technician | Network Technician**   
+*Concordia, Entre Ríos, Argentina | 28 years old*  
+*Full-time availability | On-call availability*  
+*Proprietary technical equipment and fully equipped remote workspace.*   
+san.martinezok@gmail.com | +54 345 6268262
 
 ---
 
