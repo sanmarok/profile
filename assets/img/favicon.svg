@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    circle { fill: #2563eb; } /* Azul en modo oscuro */
+    text { fill: white; font-family: sans-serif; font-weight: bold; }
+    @media (prefers-color-scheme: light) {
+      circle { fill: #1e293b; } /* Pizarra en modo claro */
+    }
+  </style>
+  <circle cx="50" cy="50" r="45" />
+  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="45">SM</text>
+</svg>

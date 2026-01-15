@@ -332,19 +332,58 @@
         { "name": "Custom Themes", "icon": "devicon-wordpress-plain" }
       ]
     },
-{
-  "id": 15,
-  "name": "BotMaker",
-  "icon": "devicon-godot-plain",
-  "comment": "Soy implementador de esta tecnología, la cual considero una solución sólida para optimizar el contacto entre un cliente y un servicio. Me permite diseñar flujos de conversación inteligentes que automatizan procesos, mejorando la experiencia de usuario y la eficiencia operativa de la organización." ,
-  "sub_items": [
-    { "name": "Flow Design", "icon": "devicon-godot-plain" },
-    { "name": "API Integrations", "icon": "devicon-javascript-plain" },
-    { "name": "NLP & AI", "icon": "devicon-godot-plain" },
-    { "name": "Omnichannel", "icon": "devicon-godot-plain" },
-    { "name": "Webhooks", "icon": "devicon-javascript-plain" }
-  ]
-}
+  {
+    "id": 15,
+    "name": "BotMaker",
+    "icon": "devicon-godot-plain",
+    "comment": "Soy implementador de esta tecnología, la cual considero una solución sólida para optimizar el contacto entre un cliente y un servicio. Me permite diseñar flujos de conversación inteligentes que automatizan procesos, mejorando la experiencia de usuario y la eficiencia operativa de la organización." ,
+    "sub_items": [
+      { "name": "Flow Design", "icon": "devicon-godot-plain" },
+      { "name": "API Integrations", "icon": "devicon-javascript-plain" },
+      { "name": "NLP & AI", "icon": "devicon-godot-plain" },
+      { "name": "Omnichannel", "icon": "devicon-godot-plain" },
+      { "name": "Webhooks", "icon": "devicon-javascript-plain" }
+    ]
+  },
+    {
+    "id": 16,
+    "name": "NGINX",
+    "icon": "devicon-nginx-original",
+    "comment": "Mi herramienta de cabecera para la orquestación de tráfico web. Lo utilizo como proxy reverso y balanceador de carga para asegurar que los servicios sean accesibles y seguros. He implementado configuraciones avanzadas de seguridad, gestión de certificados SSL/TLS y optimización de rendimiento en entornos de producción, como en este mismo portfolio desplegado en Proxmox.",
+    "sub_items": [
+      { "name": "Reverse Proxy", "icon": "devicon-nginx-original" },
+      { "name": "Load Balancing", "icon": "devicon-nginx-original" },
+      { "name": "SSL/TLS Hardening", "icon": "devicon-nginx-original" },
+      { "name": "Server Blocks", "icon": "devicon-nginx-original" },
+      { "name": "Cloudflare Integration", "icon": "devicon-nginx-original" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "FTTH & Redes de Fibra",
+    "icon": "devicon-linux-plain",
+    "comment": "Es el núcleo físico de mi trabajo en el ISP. Domino el ciclo completo de la fibra óptica: desde el diseño de ingeniería y cálculo de presupuesto óptico hasta el despliegue en campo y la certificación. Mi formación técnica me permite gestionar infraestructuras GPON/EPON, resolviendo problemas críticos de capa física y lógica para garantizar la entrega del servicio.",
+    "sub_items": [
+      { "name": "GPON / EPON", "icon": "devicon-linux-plain" },
+      { "name": "Diseño de Planta Externa", "icon": "devicon-linux-plain" },
+      { "name": "Medición OTDR & Power Meter", "icon": "devicon-linux-plain" },
+      { "name": "Presupuesto Óptico", "icon": "devicon-linux-plain" },
+      { "name": "Gestión de OLT/ONU", "icon": "devicon-linux-plain" }
+    ]
+  },
+    {
+    "id": 18,
+    "name": "Cloudflare",
+    "icon": "devicon-cloudflare-plain",
+    "comment": "Utilizo el ecosistema de Cloudflare como una capa crítica de seguridad y conectividad para mi infraestructura. Implemento Cloudflare Tunnels para exponer servicios locales de forma segura sin abrir puertos, gestiono políticas de Zero Trust para el acceso a herramientas administrativas y utilizo el WAF para mitigar ataques y filtrar tráfico no deseado antes de que llegue a mi red de Proxmox.",
+    "sub_items": [
+      { "name": "Cloudflare Tunnels", "icon": "devicon-cloudflare-plain" },
+      { "name": "Zero Trust Access", "icon": "devicon-cloudflare-plain" },
+      { "name": "WAF & Security Rules", "icon": "devicon-cloudflare-plain" },
+      { "name": "DNS Management", "icon": "devicon-cloudflare-plain" },
+      { "name": "Page Rules & Caching", "icon": "devicon-cloudflare-plain" }
+    ]
+  }
   ],
   "me": {
     "name": "Santiago Martinez",

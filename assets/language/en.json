@@ -342,7 +342,46 @@
       { "name": "Omnichannel", "icon": "devicon-godot-plain" },
       { "name": "Webhooks", "icon": "devicon-javascript-plain" }
     ]
-  }
+  },
+  {
+  "id": 16,
+  "name": "NGINX",
+  "icon": "devicon-nginx-original",
+  "comment": "My go-to tool for web traffic orchestration. I use it as a reverse proxy and load balancer to ensure services are both accessible and secure. I have implemented advanced security configurations, SSL/TLS certificate management, and performance optimization in production environments, such as this portfolio deployed on Proxmox.",
+  "sub_items": [
+    { "name": "Reverse Proxy", "icon": "devicon-nginx-original" },
+    { "name": "Load Balancing", "icon": "devicon-nginx-original" },
+    { "name": "SSL/TLS Hardening", "icon": "devicon-nginx-original" },
+    { "name": "Server Blocks", "icon": "devicon-nginx-original" },
+    { "name": "Cloudflare Integration", "icon": "devicon-nginx-original" }
+  ]
+},
+{
+  "id": 17,
+  "name": "FTTH & Fiber Networks",
+  "icon": "devicon-linux-plain",
+  "comment": "The physical core of my work at the ISP. I master the complete fiber optic cycle: from engineering design and optical budget calculations to field deployment and certification. My technical background allows me to manage GPON/EPON infrastructures, solving critical physical and logical layer issues to ensure service delivery.",
+  "sub_items": [
+    { "name": "GPON / EPON", "icon": "devicon-linux-plain" },
+    { "name": "Outside Plant (OSP) Design", "icon": "devicon-linux-plain" },
+    { "name": "OTDR & Power Meter Measurement", "icon": "devicon-linux-plain" },
+    { "name": "Optical Budget", "icon": "devicon-linux-plain" },
+    { "name": "OLT/ONU Management", "icon": "devicon-linux-plain" }
+  ]
+},
+{
+  "id": 18,
+  "name": "Cloudflare",
+  "icon": "devicon-cloudflare-plain",
+  "comment": "I utilize the Cloudflare ecosystem as a critical security and connectivity layer for my infrastructure. I implement Cloudflare Tunnels to securely expose local services without opening ports, manage Zero Trust policies for access to administrative tools, and utilize the WAF to mitigate attacks and filter unwanted traffic before it reaches my Proxmox network.",
+  "sub_items": [
+    { "name": "Cloudflare Tunnels", "icon": "devicon-cloudflare-plain" },
+    { "name": "Zero Trust Access", "icon": "devicon-cloudflare-plain" },
+    { "name": "WAF & Security Rules", "icon": "devicon-cloudflare-plain" },
+    { "name": "DNS Management", "icon": "devicon-cloudflare-plain" },
+    { "name": "Page Rules & Caching", "icon": "devicon-cloudflare-plain" }
+  ]
+}
 ],
   "me": {
     "name": "Santiago Martinez",
